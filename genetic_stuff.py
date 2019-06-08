@@ -136,6 +136,7 @@ class Population:
 
     def step(self):
         # print(f'Pop size: {len(self.organisms)}')
+        self.calc_fitness()
         for i in range(self.crossover_top):
             self.organisms += self.organisms[i].mate(self.organisms[i+1])
         self.mutate()
